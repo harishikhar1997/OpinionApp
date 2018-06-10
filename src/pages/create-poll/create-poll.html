@@ -1,0 +1,51 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Create Poll</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+  <ion-textarea placeholder="Enter your Question" [(ngModel)]="question"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <!-- <ion-label fixed>Username</ion-label> -->
+    <ion-input type="text" placeholder="Option" [(ngModel)]="option" 
+    ></ion-input>
+  </ion-item>
+  <button ion-button icon-left full end (click)="addOption()">
+    <ion-icon name="add"></ion-icon>
+    Add Option
+  </button>
+  <ion-list>
+    <ion-item *ngFor="let item of optionList">
+      {{item}}
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Categories</ion-label>
+    <ion-select [(ngModel)]="categories">
+      <ion-option value="Political">Political</ion-option>
+      <ion-option value="Human Rights">Human Rights</ion-option>
+      <ion-option value="Technology">Technology</ion-option>
+      <ion-option value="Lifestyle">Lifestyle</ion-option>
+      <ion-option value="Entertainment">Entertainment</ion-option>
+      <ion-option value="Sports">Sports</ion-option>
+      <ion-option value="Environment">Environmental</ion-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <button ion-button round full large color="secondary" (click)="createPoll()">
+      Create Poll
+    </button>
+  </ion-item>
+</ion-footer>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background: url(https://image.freepik.com/free-vector/blue-tones-blurred-background_1107-128.jpg);">
+  <ion-searchbar placeholder="Search keyword or poll" name="" 
+  style="background: rgba(0, 0, 0, 0);"></ion-searchbar>
+
+  <ion-slides options="{'loop': true}" style="width:calc(100% + 20px);height:calc(30% + 20px);margin: 0.5em;">
+  
+    <ion-slide style="background:url(assets/images/p1.jpg)
+      no-repeat center;background-size:cover;">
+        <!-- <div class="slider-title">Maharaja Burger</div> -->
+      </ion-slide>
+
+    <ion-slide style="background:url(assets/images/p2.jpg)
+      no-repeat center;background-size:cover;">
+        <!-- <div class="slider-title">Maharaja Burger</div> -->
+      </ion-slide>
+    
+      <ion-slide style="background:url(assets/images/p3.jpg) no-repeat center;background-size:cover;">
+        <!-- <div class="slider-title">Cheese Roll</div> -->
+      </ion-slide>
+  </ion-slides>
+  
+  <!-- Buttons -->
+  <ion-list no-lines style="padding: 1.2em;">
+      <button ion-button full round  large [navPush]="showPoll" style="margin-bottom:0.5em;">
+        Show Poll
+      </button>
+      <button ion-button full round  large color="secondary" [navPush]="createPoll" style="margin-bottom:0.5em;">
+        Create Poll
+      </button>
+      <button ion-button full round  large color="cred" [navPush]="showSurvey" style="margin-bottom:0.5em;">
+        Show Survey
+      </button>
+      <button ion-button full round  large color="cpurple" [navPush]="createSurvey" style="margin-bottom:0.5em;">
+        Create Survey
+      </button>
+  </ion-list>
+</ion-content>

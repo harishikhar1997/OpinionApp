@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <!-- <ion-title>Polling</ion-title> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <h1>Which is the best phone of 2K17?</h1>
+  <ion-list radio-group [(ngModel)]="option">
+     <!-- *ngFor="let item of this.poll.optionList" -->
+    <ion-item >
+      <ion-label>Pixel 2</ion-label>
+      <ion-radio value="Pixel2"></ion-radio>
+    </ion-item>
+    <ion-item >
+      <ion-label>Oneplus 5</ion-label>
+      <ion-radio value="Oneplus5"></ion-radio>
+    </ion-item>
+    <ion-item >
+      <ion-label>iPhone X</ion-label>
+      <ion-radio value="iPhoneX"></ion-radio>
+    </ion-item>
+    <ion-item >
+      <ion-label>Galaxy Note 8</ion-label>
+      <ion-radio value="S8"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-card>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <button ion-button round full large color="secondary" (click)="submitPoll()" id="submit">
+      Submit
+    </button>
+  </ion-item>
+</ion-footer>
